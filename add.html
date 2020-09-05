@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+
+    <title>Add Item</title>
+  </head>
+  <body>
+    <form>
+      <center>
+        <div class="form-group">
+          <input
+            class="form-control"
+            name="add_item"
+            required
+            placeholder="Add Item"
+            autofocus
+            id="item"
+          />
+        </div>
+        <button type="submit" class="btn btn-secondary">Add item</button>
+      </center>
+    </form>
+  </body>
+  <script>
+    const electron = require("electron");
+    const { ipcRenderer } = electron;
+    const form = document.querySelector("form");
+    form.addEventListener("submit", submitForm);
+    function submitForm(e) {
+      e.preventDefault();
+      console.log("Helo Word");
+      const item = document.querySelector("#item").value; // getting the value of item id using querySelector
+      ipcRenderer.send("item:add", item); // Sending Item to main.js using ipcRenderer
+    }
+  </script>
+</html>

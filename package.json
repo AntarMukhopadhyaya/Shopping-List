@@ -1,0 +1,15 @@
+{
+  "name": "shoppinglist",
+  "version": "1.0.0",
+  "description": "An Electron desktop App",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron  ."
+  },
+  "author": "Antar",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^10.1.1",
+    "nodemon": "^2.0.4"
+  }
+}

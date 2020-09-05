@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Grandstander", cursive;
+}
+
+li {
+  text-decoration: none;
+  padding-left: 15px;
+  font-size: 30px;
+}
+li:hover {
+  color: coral;
+}
